@@ -10,6 +10,6 @@ setuptools.setup(
     PROJECT_NAME = PROJECT_NAME,
     author= AUTHOR_NAME,
     description= DESCRIPTION,
-    package_dir= {"":"src"},
-    packages= setuptools.find_packages(where='src')
+    package_dir= {"":"vnpd"},
+    packages= setuptools.find_packages(where='vnpd')
 )

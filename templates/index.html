@@ -1,0 +1,52 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+{% if upload %}
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card align-items-center" style="padding: 2%;">
+        <img class="card-img-top"  src="/static/upload/{{upload_image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><b style="color:blue ;">Original Image</b></h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card align-items-center" style="padding: 2%;">
+        <img class="card-img-top" src="/static/predict/{{upload_image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><b style="color:red ;">Area of Interest</b></h5>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+ 
+  <table style="border: solid black; width: 100%">
+    <tr style="border: solid black">
+      <th style="text-align: center;">CROPPEED LICENCE PLATE IMAGE</th>
+    </tr>
+    <tr style="border: solid black">
+      <td>
+        <img class="img-fluid" src="/static/roi/{{ upload_image }}" alt="" />
+      </td>
+    </tr>
+    <tr style="border: solid black">
+      <th style="text-align: center;">OCR RESULT OF CROPPEED LICENCE PLATE</th>
+    </tr>
+    <tr style="border: solid black">
+      <td>
+        <img class="img-fluid" src="/static/ocr_result/{{ upload_image }}" alt="" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+{% endif %} {% endblock %}

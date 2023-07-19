@@ -1,0 +1,14 @@
+flowcharts
+logs
+notebooks
+demo.py
+template.py
+artifacts
+__pycache__
+LICENSE
+README.md
+venv
+*.jpg
+*.jpeg
+*.png
+static/model/model.h5
